@@ -5,6 +5,8 @@ A Node/Express CRUD operations on a Mongodb Database
 -> Clone repo
 -> run `npm install`
 -> using postman or any API client, test routes.
--> You are free to use
+-> Add new product, update, GET, and delete
+-> see thing.js for schema description
+-> to run `node server` server.js is the entry point
 
 Happy tweaking!
