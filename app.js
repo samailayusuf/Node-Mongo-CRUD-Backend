@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect('mongodb+srv://yusuf:yusuf@cluster0-4lthi.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://<USER>:<PASSWORD>@cluster0-4lthi.mongodb.net/test?retryWrites=true&w=majority')
   .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
   })
@@ -116,5 +116,9 @@ app.use('/api/stuff', (req, res, next) => {
     //res.status(200).json(stuff);
   });
 
+<<<<<<< HEAD
 
 module.exports = app;
+=======
+module.exports = app;
+>>>>>>> 38468cf099c269f5caa1a2be4777de5bb0d3f143
