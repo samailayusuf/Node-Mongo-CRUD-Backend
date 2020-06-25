@@ -1,5 +1,11 @@
+//SERVER FILE
+
 const http = require('http');
 const app = require('./app');
+
+/*
+  NORMALIZING PORT INTO DESIRED FORMAT
+*/
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
@@ -14,6 +20,10 @@ const normalizePort = val => {
 };
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
+/*
+  CHECKING FOR SERVER ERRORS AND HANDLING THEM
+*/
 
 const errorHandler = error => {
   if (error.syscall !== 'listen') {
