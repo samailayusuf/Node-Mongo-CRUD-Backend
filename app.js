@@ -22,7 +22,6 @@ mongoose.connect('mongodb+srv://yusuf:yusuf@cluster0-4lthi.mongodb.net/test?retr
     console.error(error);
   });
 
-
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
