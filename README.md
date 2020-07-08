@@ -3,8 +3,8 @@ A Node/Express CRUD operations on a Mongodb Database. With User authentication (
 
 ## How to use
 -> Clone repo
--> run `npm install`
--> using postman or any API client, test routes.
+-> run `npm install` to install dependencies
+-> using postman or any API client to test routes.
 -> Add new product (POST), UPDATE, GET, and DELETE
 -> see thing.js for schema description
 -> type`node server` to run application (server.js is the entry point)
