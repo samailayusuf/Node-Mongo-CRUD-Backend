@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect('mongodb+srv://<USER>:<PWD>@cluster0-4lthi.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://<USN>:<PWD>@cluster0-4lthi.mongodb.net/test?retryWrites=true&w=majority')
   .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
   })
