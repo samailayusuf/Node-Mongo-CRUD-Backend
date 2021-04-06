@@ -10,6 +10,11 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 
