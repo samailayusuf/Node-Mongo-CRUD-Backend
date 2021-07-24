@@ -1,6 +1,7 @@
 const multer = require('multer');
 
 const MIME_TYPES = {
+  //defining allowed mime types (extensions)
   'image/jpg': 'jpg',
   'image/jpeg': 'jpg',
   'image/png': 'png'
