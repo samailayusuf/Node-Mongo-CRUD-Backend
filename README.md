@@ -1,5 +1,5 @@
 # Node-Mongo-CRUD-Backend
-A Node/Express CRUD operations on a Mongodb Database. With User authentication (using JSON web token and bcrypt)...  {I did this after learning Node/Express/Mongo on Openclassroom}
+A Node/Express CRUD operations on a Mongodb Database. With User authentication (using JSON web token and bcrypt)...  Image upload with multer
 
 ## How to use
 -> Clone repo`
