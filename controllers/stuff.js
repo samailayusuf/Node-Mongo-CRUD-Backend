@@ -1,6 +1,6 @@
-const Thing = require('../models/thing');
+const Thing = require('../models/thing'); //importing the defined schema
 
-exports.createThing = (req, res, next) => {
+exports.createThing = (req, res, next) => { //creating a product and saving into the database
   req.body.thing = JSON.parse(req.body.thing);
   const url = req.protocol + '://' + req.get('host');
   const thing = new Thing({
@@ -25,7 +25,7 @@ exports.createThing = (req, res, next) => {
   );
 };
 
-exports.getOneThing = (req, res, next) => {
+exports.getOneThing = (req, res, next) => { //fetching one item from the database collection
   Thing.findOne({
     _id: req.params.id
   }).then(
@@ -40,8 +40,8 @@ exports.getOneThing = (req, res, next) => {
     }
   );
 };
-
-exports.modifyThing = (req, res, next) => {
+ 
+exports.modifyThing = (req, res, next) => { //updating one item in the collection usiing the ID
   const thing = new Thing({
     _id: req.params.id,
     title: req.body.title,
@@ -65,7 +65,7 @@ exports.modifyThing = (req, res, next) => {
   );
 };
 
-exports.deleteThing = (req, res, next) => {
+exports.deleteThing = (req, res, next) => { // deleting an item from collection using the ID
   Thing.deleteOne({_id: req.params.id}).then(
     () => {
       res.status(200).json({
@@ -81,7 +81,7 @@ exports.deleteThing = (req, res, next) => {
   );
 };
 
-exports.getAllStuff = (req, res, next) => {
+exports.getAllStuff = (req, res, next) => { //fetching all items from the database
   Thing.find().then(
     (things) => {
       res.status(200).json(things);
