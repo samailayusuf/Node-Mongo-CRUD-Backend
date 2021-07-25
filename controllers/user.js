@@ -2,12 +2,12 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 
-exports.signup = (req, res, next) => {
+exports.signup = (req, res, next) => { 
     bcrypt.hash(req.body.password, 10).then( (hash) => {
         const user = new User({
           email: req.body.email,
           password: hash
-        });
+        });//getting the password from request body and hashing it with bcrypt
 
         user.save().then(() => {
             res.status(201).json({
@@ -17,7 +17,7 @@ exports.signup = (req, res, next) => {
         ).catch((error) => {
             res.status(500).json({
               error: error
-            });
+            });//saving the user or handling the error if there is one
           }
         );
       }
