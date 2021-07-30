@@ -1,5 +1,6 @@
 const mongoose = require ('mongoose');
 
+//defining the thing schema
 const thingSchema = mongoose.Schema(
     {
         title: {type:String, required:true},
