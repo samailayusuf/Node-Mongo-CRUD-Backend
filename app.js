@@ -27,16 +27,16 @@ mongoose.connect('mongodb+srv://<USN>:<PWD>@cluster0-4lthi.mongodb.net/test?retr
     console.error(error);
   });
 
-app.use((req, res, next) => {
+app.use((req, res, next) => { //allowing request from any source
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
 });
 
-  app.use('/images', express.static(path.join(__dirname, 'images')));
-  app.use('/api/stuff', stuffRouter);
-  app.use('/api/auth', userRouter);
+  app.use('/images', express.static(path.join(__dirname, 'images'))); //defining images folder
+  app.use('/api/stuff', stuffRouter); //using stuffRouter
+  app.use('/api/auth', userRouter); // using userRouter
 
 
 
