@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require ('mongoose');
 const path = require('path');
 
-const stuffRouter = require('./routes/stuff');
+const stuffRouter = require('./routes/stuff'); 
 const userRouter = require('./routes/user');
 
 const app = express();
@@ -18,7 +18,7 @@ app.use(express.urlencoded({
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect('mongodb+srv://<USN>:<PWD>@cluster0-4lthi.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://<USN>:<PWD>@cluster0-4lthi.mongodb.net/test?retryWrites=true&w=majority') //Conecting to mongo DB
   .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
   })
