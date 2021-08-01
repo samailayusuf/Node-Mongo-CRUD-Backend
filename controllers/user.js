@@ -25,19 +25,19 @@ exports.signup = (req, res, next) => {
   };
 
 
-  exports.login = (req, res, next) => {
+  exports.login = (req, res, next) => { //controller to handle login
     User.findOne({ email: req.body.email }).then(
-      (user) => {
+      (user) => { //retrived user data from DB
         if (!user) {
           return res.status(401).json({
-            error: new Error('User not found!')
+            error: new Error('User not found!') //error is returned if user is not set
           });
         }
         bcrypt.compare(req.body.password, user.password).then(
-          (valid) => {
+          (valid) => { //if password comparison was successful
             if (!valid) {
               return res.status(401).json({
-                error: new Error('Incorrect password!')
+                error: new Error('Incorrect password!') //thow error if not successfully compared
               });
             }
             const token = jwt.sign(
